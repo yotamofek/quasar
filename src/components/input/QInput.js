@@ -295,7 +295,10 @@ export default {
             disabled: this.disable,
             readonly: this.readonly
           }),
-          domProps: { value: this.model },
+          domProps: {
+            value: this.model,
+            dir: 'auto'
+          },
           on: {
             input: this.__set,
             focus: this.__onFocus,
@@ -318,9 +321,12 @@ export default {
           placeholder: this.inputPlaceholder,
           disabled: this.disable,
           readonly: this.readonly,
-          step: this.computedStep
+          step: this.computedStep,
         }),
-        domProps: { value: this.model },
+        domProps: {
+          value: this.model,
+          dir: 'auto'
+        },
         on: {
           input: this.__set,
           focus: this.__onFocus,
